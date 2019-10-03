@@ -4,25 +4,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>hw101-maven</groupId>
-    <artifactId>JavaMiddle</artifactId>
-    <version>2019-09-SNAPSHOT</version>
+    <parent>
+        <groupId>JavaMiddle</groupId>
+        <artifactId>JavaMiddle</artifactId>
+        <version>2019-09-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>hw01-maven</artifactId>
+    <name>hw01-maven</name>
 
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>28.1-jre</version>
         </dependency>
     </dependencies>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+    <packaging>jar</packaging>
 
     <build>
+        <finalName>${project.name}</finalName>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
