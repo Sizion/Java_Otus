@@ -25,6 +25,9 @@
 
     <modules>
         <module>hw01-maven</module>
+        <module>hw02-ArrayList</module>
+        <module>hw03-GC</module>
+        <module>hw06-АТМ</module>
     </modules>
 
     <properties>

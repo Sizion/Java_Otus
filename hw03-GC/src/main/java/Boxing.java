@@ -1,0 +1,39 @@
+/*
+-Xms256m
+-Xmx256m
+-verbose:gc
+-XX:+UseG1GC
+*/
+
+public class Boxing {
+    public static void main(String[] args) throws InterruptedException {
+        //calcInteger();
+        calcInt();
+    }
+
+    public static void calcInteger() throws InterruptedException {
+        final int limit = Integer.MAX_VALUE;
+        Integer counter = 0;
+
+        for (int idx = 0; idx < limit; idx++){
+            counter+=Integer.valueOf(1);
+
+            if (idx % 1_000_000==0){
+                Thread.sleep(1000);
+            }
+        }
+    }
+
+    public static void calcInt() throws InterruptedException {
+        final int limit = Integer.MAX_VALUE;
+        int counter = 0;
+
+        for (int idx = 0; idx < limit; idx++){
+            counter+=1;
+
+            if (idx % 1_000_000==0){
+                Thread.sleep(1000);
+            }
+        }
+    }
+}
